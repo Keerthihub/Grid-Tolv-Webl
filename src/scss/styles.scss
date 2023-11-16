@@ -9,5 +9,61 @@ img {
   max-width: 100%;
 }
 
+
 header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  padding: 0.86vw 0 0.86vw 0;
+  z-index: 9999;
+  background-color: #fff;
+
+  .content-wrap {
+    position: relative;
+    padding: 0 6vw 0 6vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+     li {
+      margin-right: 2.34vw;
+      line-height: 1.25rem;
+
+      &:last-child {
+        margin-right: 0px !important;
+      }
+
+      p {
+        font-size: 1.1em;
+        font-weight: 300;
+        color: #222226;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    }
+
+    .header-logo {
+      height: auto;
+      max-width: 70px;
+      place-self: center;
+    }
+
+    .search {
+      justify-self: end;
+    }
+
+    svg {
+        width: 55px;
+        height: 25px;
+    }
+  }
 }
