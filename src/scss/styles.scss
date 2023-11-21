@@ -177,3 +177,46 @@ header {
   }
 }
 
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 50vh;
+
+  .container {
+    position: relative;
+    overflow: hidden;
+
+    &:first-child,
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(10) {
+      grid-column-start: span 2;
+    }
+  }
+
+.image {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2 linear;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.container:hover .image {
+  filter: blur(65px);
+}
+
+.container:hover .text {
+  opacity: 1;
+  z-index: 1;
+}
+
+}
